@@ -1,10 +1,10 @@
 
-Cameron Wright
-Dr. Ribeiro
-CSE4001 Sect. 01
-13th of November 2020
+Cameron Wright\
+Dr. Ribeiro\
+CSE4001 Sect. 01\
+13th of November 2020\
 
-<center> <h2>Implement Scheduler Assignment</h2> </center>
+## Implement Scheduler Assignment
 
 ### Design:
 
@@ -15,13 +15,13 @@ CSE4001 Sect. 01
 
 <center> <h5>Default Scheduler [Round Robin]:</h5> </center>
 
-Hog
+Hog\
 ![](DefaultHog.png)
 
-Farm
+Farm\
 ![](DefaultFarm.png)
 
-Schedpong
+Schedpong\
 ![](DefaultPong.png)
 
 <center> <h5>Implemented Scheduler [FIFO]:</h5> </center>
