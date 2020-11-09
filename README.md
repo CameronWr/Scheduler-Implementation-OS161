@@ -4,9 +4,9 @@ Dr. Ribeiro\
 CSE4001 Sect. 01\
 13th of November 2020
 
-<h4><p align="center">
+<h2><p align="center">
 Implement Scheduler Assignment
-</p></h4>
+</p></h2>
 
 ### Design:
 
@@ -15,11 +15,14 @@ Implement Scheduler Assignment
 
 ### Benchmark:
 
-**Default Scheduler [Round Robin]**
+<h4><p align="center">
+Default Scheduler [Round Robin]
+</p></h4>
 
 ![](DefaultHog.png)\
 ![](DefaultFarm.png)\
-![](DefaultPong.png)\
+![](DefaultPong.png)
 
-**Implemented Scheduler [FIFO]:**
-
+<h4><p align="center">
+Implemented Scheduler [FIFO]:
+</p></h4>
