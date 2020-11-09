@@ -13,15 +13,10 @@ CSE4001 Sect. 01\
 
 ### Benchmark:
 
-**Default Scheduler [Round Robin]:**
+**Default Scheduler [Round Robin]**
 
-Hog\
 ![](DefaultHog.png)
-
-Farm\
 ![](DefaultFarm.png)
-
-Schedpong\
 ![](DefaultPong.png)
 
 **Implemented Scheduler [FIFO]:**
