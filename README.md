@@ -21,7 +21,7 @@ Default Scheduler [Round Robin]
 
 <p align="center">
 
-![](DefaultHog.png)
+![](DefaultHog.png)\
 ![](DefaultFarm.png)\
 ![](DefaultPong.png)
 
