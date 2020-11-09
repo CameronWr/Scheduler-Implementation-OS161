@@ -4,7 +4,9 @@ Dr. Ribeiro\
 CSE4001 Sect. 01\
 13th of November 2020
 
-## Implement Scheduler Assignment
+<h4><p align="center">
+Implement Scheduler Assignment
+</p></h4>
 
 ### Design:
 
