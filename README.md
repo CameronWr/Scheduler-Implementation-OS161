@@ -15,9 +15,9 @@ CSE4001 Sect. 01\
 
 **Default Scheduler [Round Robin]**
 
-![](DefaultHog.png)
-![](DefaultFarm.png)
-![](DefaultPong.png)
+![](DefaultHog.png)\
+![](DefaultFarm.png)\
+![](DefaultPong.png)\
 
 **Implemented Scheduler [FIFO]:**
 
