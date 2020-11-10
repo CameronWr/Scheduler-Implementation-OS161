@@ -9,7 +9,10 @@ Implement Scheduler Assignment
 </p></h2>
 
 ### Design:
-
+I decided to implement a FIFO (First In First Out) or FCFS (First Come First Serve) scheduler that works by running each process in the order they arrive. 
+![](FIFO-Diagram.png)
+FIFO is the simplest scheduler implementation and has sub-optimal turn around times in general compared to others such as SJF (Shortest Job First). An SJF scheduler runs the shortest of all the threads in the run queue first, often resulting in a quicker turn around time (see diagram).
+![](SJF-Digram.png)
 
 ### Implementation:
 
@@ -23,6 +26,7 @@ Default Scheduler [Round Robin]
 ![](Default-Farm.png)\
 ![](Default-Pong.png)
 
+<br />
 
 <h4><p align="center">
 Implemented Scheduler [FIFO]:
