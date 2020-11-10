@@ -19,11 +19,16 @@ Implement Scheduler Assignment
 Default Scheduler [Round Robin]
 </p></h4>
 
-![](DefaultHog.png)\
-![](DefaultFarm.png)\
-![](DefaultPong.png)
+![](Default-Hog.png)\
+![](Default-Farm.png)\
+![](Default-Pong.png)
 
 
 <h4><p align="center">
 Implemented Scheduler [FIFO]:
 </p></h4>
+
+![](FCFS-Hog.png)\
+![](FCFS-Farm.png)\
+![](FCFS-Pong.png)
+
