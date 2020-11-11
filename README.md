@@ -14,7 +14,7 @@ I decided to implement a FIFO (First In First Out) or FCFS (First Come First Ser
 ![](FIFO-Diagram.png)\
 FIFO is the simplest scheduler implementation and has sub-optimal turn around times in general compared to others such as SJF (Shortest Job First). An SJF scheduler runs the shortest of all the threads in the run queue first, often resulting in a quicker turn around time (see diagram).
 
-![](SJF-Digram.png)\
+![](SJF-Digram.png)
 
 ### Implementation:
 
@@ -38,3 +38,5 @@ Implemented Scheduler [FIFO]:
 ![](FCFS-Farm.png)\
 ![](FCFS-Pong.png)
 
+#### Sources:
+*All scheduler diagrams are from [Operating Systems: Three Easy Pieces (Arpaci-Dusseau)](http://pages.cs.wisc.edu/~remzi/OSTEP/ "E-Book")*.
