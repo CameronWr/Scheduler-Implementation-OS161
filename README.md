@@ -20,12 +20,11 @@ FIFO is the simplest scheduler implementation, as it's just a simple queue. Thus
 ![Shortest Job First](SJF-Digram.png)\
 ![Shortest Time to Completiton First](CTCF-Diagram.png)
 
-While turnaround time is important in performance, reactivity is important; after all, you don't want to leave a user waiting.
-Once again, my FIFO implementation is outdone by another scheduler implementation, RR (Round Robin) scheduling. This implementation focuses response time by rapidly switching between threads in the queue until each is complete.
+While turnaround time is important in performance, reactivity is also important; after all, you don't want to leave a user waiting while other threads are executing. Once again, my FIFO implementation is outdone by another scheduler implementation, RR (Round Robin) scheduling, which is used in OS161. This implementation focuses on response time by rapidly switching between threads in the queue until each is complete.
 
 ![Round Robin](RR-Diagram.png)
 
-Allowing for much quicker response times and even exponentially better turnaround times when working on a multi-core system, as threads can be spread between cores. However, in the OS161 implementation, there is only a single core, and thus the turn around time ends up being worse due to the cost of switching between threads. So much worse, FIFO ends up with better turnaround times, which is reflected in the benchmark results.
+Allowing for much quicker response times and even exponentially better turnaround times when working on a multi-core system, as threads can be spread between cores. However, in the OS161 implementation, there is only a single core, and thus the turn around time ends up being worse due to the cost of switching between threads. So much worse, FIFO ends up with better turnaround times, which is reflected in the benchmark results, as the FIFO implementation is quicker in every test run.
 
 <br />
 
