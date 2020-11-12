@@ -48,9 +48,9 @@ This is the resulting implementation of my FIFO scheduling algorithm, and althou
 Default Scheduler [Round Robin]
 </p></h4>
 
-![](Default-Hog.png)\
-![](Default-Farm.png)\
-![](Default-Pong.png)
+![Hog](Default-Hog.png)\
+![Farm](Default-Farm.png)\
+![Pong](Default-Pong.png)
 
 <br />
 
@@ -58,9 +58,9 @@ Default Scheduler [Round Robin]
 Implemented Scheduler [FIFO]:
 </p></h4>
 
-![](FCFS-Hog.png)\
-![](FCFS-Farm.png)\
-![](FCFS-Pong.png)
+![Hog](FIFO-Hog.png)\
+![Farm](FIFO-Farm.png)\
+![Pong](FIFO-Pong.png)
 
 #### Sources:
 *All scheduler diagrams are from [Operating Systems: Three Easy Pieces (Arpaci-Dusseau)](http://pages.cs.wisc.edu/~remzi/OSTEP/ "E-Book")*.
