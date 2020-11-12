@@ -30,7 +30,7 @@ Allowing for much quicker response times and even exponentially better turnaroun
 <br />
 
 ### Implementation:
-I implemented my FIFO scheduler by modifying the existing RR (Round Robin) implementation. The current implementation switches between the threads on the run queue in the order they arrive. It does this within the hardclock function.
+I implemented my FIFO scheduler by modifying the existing RR implementation. The current implementation switches between the threads on the run queue in the order they arrive. It does this within the hardclock function.
 
 ![](RR-hardclock.png)
 
