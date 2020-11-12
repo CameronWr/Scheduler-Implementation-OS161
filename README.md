@@ -25,10 +25,21 @@ Once again, my FIFO implementation is outdone by another scheduler implementatio
 
 ![Round Robin](RR-Diagram.png)
 
-Allowing for much quicker response times and even exponentially better turnaround times when working on a multi-core system, as threads can be spread between cores. However, in the OS161 implementation, there is only a single core, and thus the turn around time ends up being worse due to the cost of switching between threads. So much worse, FIFO ends up with better turnaround times, which is reflected in the benchmarks' results.
+Allowing for much quicker response times and even exponentially better turnaround times when working on a multi-core system, as threads can be spread between cores. However, in the OS161 implementation, there is only a single core, and thus the turn around time ends up being worse due to the cost of switching between threads. So much worse, FIFO ends up with better turnaround times, which is reflected in the benchmark results.
 
 
 ### Implementation:
+I implemented my FIFO scheduler by modifying the existing RR (Round Robin) implementation. The current implementation switches between the threads on the run queue in the order they arrive. It does this within the hardclock function.
+
+![](RR-hardclock.png)
+
+This is the heart of the RR implementation; every time *thread_timeryield( )* is called, it calls *thread_switch( )* with parameters indicating both the new status of the current (running) thread and that it was called from a timer. *thread_switch( )* then sets its status and swaps the current thread with the next thread on the run queue. Thus, to implement a FIFO scheduler, this function needs to be removed. Then instead of swapping based on hardclocks, threads will just be run as they arrive and until they are complete.
+However, there is more inside the hardclock function, and I want my FIFO implementation to be clean. Thus, in addition to removing *thread_timeryield( )*, the schedule function, which is empty, is also removed. Furthermore, the *thread_consider_migration( )*function checks if other CPUs are free and moves threads accordingly, spreading the load. The issue is, as mentioned before, OS161 is operating on only a single CPU; thus, there is no need, and this is removed as well.
+
+![](FIFO-hardclock.png)
+
+This is the resulting implementation of a FIFO scheduling algorithm; now, only a simple run queue data structure is used to store threads as they arrive, running each until completion.
+
 
 ### Benchmark:
 
