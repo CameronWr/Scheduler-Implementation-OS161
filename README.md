@@ -2,7 +2,7 @@
 Cameron Wright\
 Dr. Ribeiro\
 CSE4001 Sect. 01\
-13th of November 2020
+11th of November 2020
 
 <h2><p align="center">
 Implement Scheduler Assignment
@@ -32,12 +32,12 @@ Allowing for much quicker response times and even exponentially better turnaroun
 ### Implementation:
 I implemented my FIFO scheduler by modifying the existing RR implementation. The current implementation switches between the threads on the run queue in the order they arrive. It does this within the hardclock function.
 
-![](RR-hardclock.png)
+![Before Implementation](RR-hardclock.png)
 
 This is the heart of the RR implementation; every time *thread_timeryield( )* is called, it calls *thread_switch( )* with parameters indicating both the new status of the current (running) thread and that it was called from a timer. *thread_switch( )* then sets its status and swaps the current thread with the next thread on the run queue. Thus, to implement a FIFO scheduler, this function needs to be removed. Then instead of swapping based on hardclocks, threads will just be run as they arrive and until they are complete.
 However, there is more inside the hardclock function, and I want my FIFO implementation to be clean. Thus, in addition to removing *thread_timeryield( )*, the schedule function, which is empty, is also removed. Furthermore, the *thread_consider_migration( )* function checks if other CPUs are free and moves threads accordingly, spreading the load. The issue is, as mentioned before, OS161 is operating on only a single CPU; thus, there is no need, and this is removed as well.
 
-![](FIFO-hardclock.png)
+![After Implementation](FIFO-hardclock.png)
 
 This is the resulting implementation of my FIFO scheduling algorithm, and although there was no additional code added. The removal of the RR scheduling code left only the components of a FIFO scheduler remaining. A simple run queue data structure is used to store threads as they arrive, which runs each thread until completion once they reach the queue's head (front).
 
