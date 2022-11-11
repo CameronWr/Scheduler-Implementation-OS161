@@ -1,11 +1,8 @@
-
 Cameron Wright\
-Dr. Ribeiro\
-CSE4001 Sect. 01\
-11th of November 2020
+CSE4001 Sect. 01
 
 <h2><p align="center">
-Implement Scheduler Assignment
+Implement FIFO Scheduler in OS161
 </p></h2>
 
 ### Design:
@@ -64,3 +61,4 @@ Implemented Scheduler [FIFO]:
 
 #### Sources:
 *All scheduler diagrams are from [Operating Systems: Three Easy Pieces (Arpaci-Dusseau)](http://pages.cs.wisc.edu/~remzi/OSTEP/ "E-Book")*.
+
