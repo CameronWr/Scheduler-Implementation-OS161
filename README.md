@@ -60,5 +60,5 @@ Implemented Scheduler [FIFO]:
 ![Pong](FIFO-Pong.png)
 
 #### Sources:
-*The operating system utilized is [OS/161](http://www.os161.org/)*.
+*The operating system utilized is [OS/161](http://www.os161.org/)*.\
 *All scheduler diagrams are from [Operating Systems: Three Easy Pieces (Arpaci-Dusseau)](http://pages.cs.wisc.edu/~remzi/OSTEP/ "E-Book")*.
