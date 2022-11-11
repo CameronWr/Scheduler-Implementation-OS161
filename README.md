@@ -2,7 +2,7 @@ Cameron Wright\
 CSE4001 Sect. 01
 
 <h2><p align="center">
-Implement FIFO Scheduler in OS161
+Implement FIFO Scheduler in OS/161
 </p></h2>
 
 ### Design:
@@ -17,11 +17,11 @@ FIFO is the simplest scheduler implementation, as it's just a simple queue. Thus
 ![Shortest Job First](SJF-Digram.png)\
 ![Shortest Time to Completiton First](CTCF-Diagram.png)
 
-While turnaround time is important in performance, reactivity is also important; after all, you don't want to leave a user waiting while other threads are executing. Once again, my FIFO implementation is outdone by another scheduler implementation, RR (Round Robin) scheduling, which is used in OS161. This implementation focuses on response time by rapidly switching between threads in the queue until each is complete.
+While turnaround time is important in performance, reactivity is also important; after all, you don't want to leave a user waiting while other threads are executing. Once again, my FIFO implementation is outdone by another scheduler implementation, RR (Round Robin) scheduling, which is used in OS/161. This implementation focuses on response time by rapidly switching between threads in the queue until each is complete.
 
 ![Round Robin](RR-Diagram.png)
 
-Allowing for much quicker response times and even exponentially better turnaround times when working on a multi-core system, as threads can be spread between cores. However, in the OS161 implementation, there is only a single core, and thus the turn around time ends up being worse due to the cost of switching between threads. So much worse, FIFO ends up with better turnaround times, which is reflected in the benchmark results, as the FIFO implementation is quicker in every test run.
+Allowing for much quicker response times and even exponentially better turnaround times when working on a multi-core system, as threads can be spread between cores. However, in the OS/161 implementation, there is only a single core, and thus the turn around time ends up being worse due to the cost of switching between threads. So much worse, FIFO ends up with better turnaround times, which is reflected in the benchmark results, as the FIFO implementation is quicker in every test run.
 
 <br />
 
@@ -31,7 +31,7 @@ I implemented my FIFO scheduler by modifying the existing RR implementation. The
 ![Before Implementation](RR-hardclock.png)
 
 This is the heart of the RR implementation; every time *thread_timeryield( )* is called, it calls *thread_switch( )* with parameters indicating both the new status of the current (running) thread and that it was called from a timer. *thread_switch( )* then sets its status and swaps the current thread with the next thread on the run queue. Thus, to implement a FIFO scheduler, this function needs to be removed. Then instead of swapping based on hardclocks, threads will just be run as they arrive and until they are complete.
-However, there is more inside the hardclock function, and I want my FIFO implementation to be clean. Thus, in addition to removing *thread_timeryield( )*, the schedule function, which is empty, is also removed. Furthermore, the *thread_consider_migration( )* function checks if other CPUs are free and moves threads accordingly, spreading the load. The issue is, as mentioned before, OS161 is operating on only a single CPU; thus, there is no need, and this is removed as well.
+However, there is more inside the hardclock function, and I want my FIFO implementation to be clean. Thus, in addition to removing *thread_timeryield( )*, the schedule function, which is empty, is also removed. Furthermore, the *thread_consider_migration( )* function checks if other CPUs are free and moves threads accordingly, spreading the load. The issue is, as mentioned before, OS/161 is operating on only a single CPU; thus, there is no need, and this is removed as well.
 
 ![After Implementation](FIFO-hardclock.png)
 
@@ -60,5 +60,5 @@ Implemented Scheduler [FIFO]:
 ![Pong](FIFO-Pong.png)
 
 #### Sources:
+*The operating system utilized is [OS/161](http://www.os161.org/)*.
 *All scheduler diagrams are from [Operating Systems: Three Easy Pieces (Arpaci-Dusseau)](http://pages.cs.wisc.edu/~remzi/OSTEP/ "E-Book")*.
-
